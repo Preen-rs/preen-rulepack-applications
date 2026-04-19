@@ -1,0 +1,25 @@
+schema_version = 1
+id = "applications-inventory-preview"
+name = "Applications Inventory Preview"
+category = "Other"
+risk = "Low"
+enabled = true
+
+[match]
+mode = "Paths"
+paths = ["/Applications", "~/Applications"]
+strategy = "Shallow"
+command = []
+parser = ""
+
+[action]
+action_type = "ScanPaths"
+paths = ["/Applications", "~/Applications"]
+command = []
+mode = "Confirm"
+timeout_sec = 30
+allow_globs = false
+max_items = 10000
+package_manager = ""
+project_types = []
+params = { smart_care_capability = "applications", smart_care_review_hint = "Review installed applications before update or cleanup tasks" }

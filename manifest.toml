@@ -1,0 +1,27 @@
+schema_version = 1
+pack_id = "preen-rs.applications.base"
+name = "Preen Applications Base"
+version = "0.1.0"
+description = "Official base capability pack for applications-focused Smart Care checks on macOS and Linux."
+author = "Preen Team"
+license = "MIT"
+homepage = "https://github.com/Preen-rs/preen-rulepack-applications"
+core_compat = ">=0.1.0,<2.0.0"
+action_api = 1
+os_targets = ["Macos", "Linux"]
+capabilities = ["FsRead", "RunCommand"]
+
+[signing]
+sigstore = true
+issuer = "https://token.actions.githubusercontent.com"
+identity = "https://github.com/Preen-rs/preen-rulepack-applications/.github/workflows/release-manual.yml@refs/heads/main"
+
+[[rules]]
+id = "applications-inventory-preview"
+name = "Applications Inventory Preview"
+rule_file = "rules/applications-inventory-preview.toml"
+
+[[rules]]
+id = "applications-update-preview"
+name = "Applications Update Preview"
+rule_file = "rules/applications-update-preview.toml"
