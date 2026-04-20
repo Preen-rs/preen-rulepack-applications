@@ -1,7 +1,7 @@
 schema_version = 1
 id = "applications-update-preview"
 name = "Applications Update Preview"
-category = "Other"
+category = { Other = "applications" }
 risk = "Medium"
 enabled = true
 

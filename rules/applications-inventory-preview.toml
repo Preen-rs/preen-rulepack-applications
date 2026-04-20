@@ -1,7 +1,7 @@
 schema_version = 1
 id = "applications-inventory-preview"
 name = "Applications Inventory Preview"
-category = "Other"
+category = { Other = "applications" }
 risk = "Low"
 enabled = true
 
